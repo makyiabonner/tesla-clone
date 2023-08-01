@@ -31,3 +31,31 @@
 .credit_info_a:hover{
     border-bottom: 2px solid white;
 }
+.logo{
+    width: 120px;
+}
+.nav{
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    padding: 0 45px;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav_list{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 27%;
+}
+.nav_list_item{
+    font-family: 'Roboto', sans-serif;
+}
+.nav_help{
+    display: flex;
+    gap: 7px;
+}
+.nav_help_icons{
+    width: 25px;
+}

@@ -17,7 +17,9 @@ export default function Home() {
       </Head>
       <Nav/>
       <main className={`${styles.main} ${inter.className}`}>
-      
+      <video width="320" height="240" autoplay loop={true} muted={true}>
+        <source src="tesla-hero.mp4" type="video/mp4" />
+      </video>
       </main>
     </>
   )
