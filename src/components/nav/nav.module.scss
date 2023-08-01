@@ -1,0 +1,33 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.credit_info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+    gap: 20px;
+    background: linear-gradient(160deg, rgb(118, 138, 201,.3)  , rgb(10, 10, 10) 90%),
+                linear-gradient(3deg, rgb(0,0,0) 0%, rgb(70, 90, 156) 60%);
+}
+.credit_info_h3,.credit_info_p,.credit_info_a{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+}
+.credit_info_h3{
+    font-size: 20px;
+    letter-spacing: .5px;
+}
+.credit_info_p{
+    font-size: 17px;
+}
+.credit_info_a{
+    height: fit-content;
+    border-bottom: 1px solid white;
+    font-size: 17px;
+    transition: .5s linear .5s;
+}
+.credit_info_a:hover{
+    border-bottom: 2px solid white;
+}
