@@ -3,7 +3,7 @@ import styles from './nav.module.scss';
 
 export default function Nav(){
     return (
-        <>
+        <div className='position-fixed top-0 left-0 w-100 text-light'>
             <div className={styles.credit_info}>
                 <h3 className={styles.credit_info_h3}>$7,500 Federal Tax Credit</h3>
                 <p className={styles.credit_info_p}>Available for new Model 3 and Model Y. Reductions to tax credit likely after Dec 31.</p>
@@ -32,6 +32,6 @@ export default function Nav(){
                     </svg>
                 </div>
             </nav>
-        </>
+        </div>
     )
 }

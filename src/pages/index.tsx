@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.scss'
 import Nav from '@/components/nav/nav'
+import PageCreator from '@/components/nav/pagecreator/pagecreator'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,11 +16,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav/>
-      <main className={`${styles.main} ${inter.className}`}>
-      <video width="320" height="240" autoplay loop={true} muted={true}>
-        <source src="tesla-hero.mp4" type="video/mp4" />
-      </video>
+      <main className='d-flex flex-column'>
+        <Nav/>
+        <video className='w-100' autoPlay loop muted>
+          <source src='https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto/Homepage-Demo-Drive-Desktop-NA.mp4' type="video/mp4" />
+        </video>
+        <section>
+          <h1>Experience Tesla</h1>
+          <p>Schedule a Demo Drive Today</p>
+          <button>Demo Drive</button>
+        </section>
+        <PageCreator/>
       </main>
     </>
   )
