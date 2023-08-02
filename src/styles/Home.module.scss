@@ -2,3 +2,22 @@
   display: flex;
   flex-direction: column;
 }
+.hero_section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  padding: 120px;
+}
+.page_light_button{
+  padding: 7px 70px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+}

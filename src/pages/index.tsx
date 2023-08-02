@@ -21,10 +21,12 @@ export default function Home() {
         <video className='w-100' autoPlay loop muted>
           <source src='https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto/Homepage-Demo-Drive-Desktop-NA.mp4' type="video/mp4" />
         </video>
-        <section>
-          <h1>Experience Tesla</h1>
-          <p>Schedule a Demo Drive Today</p>
-          <button>Demo Drive</button>
+        <section className={styles.hero_section}>
+          <div className='d-flex flex-column align-items-center'>
+            <h1>Experience Tesla</h1>
+            <p>Schedule a Demo Drive Today</p>
+          </div>
+          <button className={styles.page_light_button}>Demo Drive</button>
         </section>
         <PageCreator/>
       </main>

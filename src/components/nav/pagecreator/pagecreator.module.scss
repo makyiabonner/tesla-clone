@@ -10,3 +10,27 @@
     background-size: cover;
     background-position: center;
 }
+.page_twobutton_layout{
+    display: flex;
+    gap: 20px;
+}
+.page_light_button,.page_dark_button{
+    padding: 7px 70px;
+    border: none;
+    border-radius: 5px;
+}
+.page_light_button{
+    background-color: white;
+    color: black;
+}
+.page_dark_button{
+    background-color: rgba(0,0,0,.6);
+    color: white;
+}
+.price,.subtitle{
+    text-align: center;
+}
+.link{
+    text-align: center;
+    color: black;
+}

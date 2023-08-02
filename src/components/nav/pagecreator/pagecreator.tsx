@@ -34,7 +34,7 @@ export default function PageCreator(){
             <section key={page.id} style={{backgroundImage:`url(${page.img})`}} className={styles.page}>
                 <div>
                     <h1 className={styles.subtitle}>{page.subtitle}</h1>
-                    <a className={styles.price}><p>{page.link}</p></a>
+                    <a className={styles.link}><p>{page.link}</p></a>
                 </div>
                 <div className={styles.page_twobutton_layout}>
                   <button className={styles.page_light_button}>Order Now</button>
@@ -47,7 +47,7 @@ export default function PageCreator(){
             <section key={page.id} style={{backgroundImage:`url(${page.img})`}} className={styles.page}>
                 <div>
                     <h1 className={styles.subtitle}>{page.subtitle}</h1>
-                    <a className={styles.price}><p>{page.link}</p></a>
+                    <a className={styles.link}><p>{page.link}</p></a>
                 </div>
                 <div className={styles.page_twobutton_layout}>
                   <button className={styles.page_light_button}>Order Now</button>
@@ -60,7 +60,7 @@ export default function PageCreator(){
             <section key={page.id} style={{backgroundImage:`url(${page.img})`}} className={styles.page}>
                 <div>
                     <h1 className={styles.subtitle}>{page.subtitle}</h1>
-                    <p className={styles.price}>{page.text}</p>
+                    <p className={styles.text}>{page.text}</p>
                 </div>
                 <div className={styles.page_twobutton_layout}>
                   <button className={styles.page_light_button}>Order Now</button>
