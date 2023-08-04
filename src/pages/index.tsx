@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
       <main className='d-flex flex-column'>
         <Nav/>
-        <video className='w-100' autoPlay loop muted>
+        <video className={`w-100 ${styles.video}`} autoPlay loop muted>
           <source src='https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto/Homepage-Demo-Drive-Desktop-NA.mp4' type="video/mp4" />
         </video>
         <section className={styles.hero_section}>

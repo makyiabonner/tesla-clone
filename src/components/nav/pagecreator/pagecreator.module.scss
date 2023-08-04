@@ -5,12 +5,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding-block: 8rem;
     width: auto;
     height: 100vh;
     scroll-behavior: smooth;
     background-size: cover;
     background-position: center;
+    padding-top: clamp(10rem,7vh,13rem);
+    padding-bottom: clamp(3rem,7vh,5rem);
+    padding-inline: min(1rem);
 
 }
 .page_twobutton_layout{
@@ -21,6 +23,7 @@
     padding: 7px 70px;
     border: none;
     border-radius: 5px;
+    font-size: 15px;
 }
 .page_light_button{
     background-color: white;
