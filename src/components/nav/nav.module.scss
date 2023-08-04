@@ -3,28 +3,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 55px;
-    gap: 20px;
+    width: auto;
+    padding-block: 1rem;
+    gap: clamp(.3em,2vw, 1rem);
     background: linear-gradient(160deg, rgb(118, 138, 201,.3)  , rgb(10, 10, 10) 90%),
                 linear-gradient(3deg, rgb(0,0,0) 0%, rgb(70, 90, 156) 60%);
 }
-.credit_info_h3,.credit_info_p,.credit_info_a{
+.credit_info_h3,
+.credit_info_p,
+.credit_info_a,
+.mobile_menu{
     font-family: 'GothamSSm';
     color:white;
     margin: 0;
 }
+.mobile_menu{
+    font-size: min(.9rem);
+    background-color: rgba($color: #000000, $alpha: .1);
+    padding-block: min(.4rem);
+    padding-inline: min(1rem);
+    border: none;
+}
 .credit_info_h3{
-    font-size: 16px;
+    font-size: clamp(.8rem,2vw,1rem);
     font-weight: 700;
     letter-spacing: .5px;
 }
-.credit_info_p{
-    font-size: 14px;
+.credit_info_p,.credit_info_a{
+    font-size: clamp(.8rem,2vw,.9rem);
 }
 .credit_info_a{
     height: fit-content;
-    font-size: 14px;
     transition: .5s linear .5s;
 }
 .credit_info_a:hover{
@@ -35,10 +44,11 @@
 }
 .nav{
     display: flex;
-    width: 100%;
+    width: auto;
     background-color: transparent;
-    padding: 0 45px;
-    height: 60px;
+    padding-block:.8rem;
+    padding-inline:clamp(.5rem,7vw,2rem);
+    max-height: 6rem;
     justify-content: space-between;
     align-items: center;
 }

@@ -23,7 +23,7 @@ export default function PageCreator(){
                     <h1 className={styles.subtitle}>{page.subtitle}</h1>
                     <p className={styles.price}>{`Starting at ${page.price}`}<br></br>After Federal Tax Credit</p>
                 </div>
-                <div className={styles.page_twobutton_layout}>
+                <div className={`d-flex flex-column flex-md-row ${styles.page_twobutton_layout}`}>
                     <button className={styles.page_light_button}>Explore Inventory</button>
                     <button className={styles.page_dark_button}>Custom Order</button>
                 </div> 
@@ -36,7 +36,7 @@ export default function PageCreator(){
                     <h1 className={styles.subtitle}>{page.subtitle}</h1>
                     <a className={styles.link}><p>{page.link}</p></a>
                 </div>
-                <div className={styles.page_twobutton_layout}>
+                <div className={`d-flex flex-column flex-md-row ${styles.page_twobutton_layout}`}>
                   <button className={styles.page_light_button}>Order Now</button>
                   <button className={styles.page_dark_button}>Learn More</button>
                 </div> 
@@ -49,7 +49,7 @@ export default function PageCreator(){
                     <h1 className={styles.subtitle}>{page.subtitle}</h1>
                     <a className={styles.link}><p>{page.link}</p></a>
                 </div>
-                <div className={styles.page_twobutton_layout}>
+                <div className={`d-flex flex-column flex-md-row ${styles.page_twobutton_layout}`}>
                   <button className={styles.page_light_button}>Order Now</button>
                   <button className={styles.page_dark_button}>Learn More</button>
                 </div>  
@@ -62,7 +62,7 @@ export default function PageCreator(){
                     <h1 className={styles.subtitle}>{page.subtitle}</h1>
                     <p className={styles.text}>{page.text}</p>
                 </div>
-                <div className={styles.page_twobutton_layout}>
+                <div className={`d-flex flex-column flex-md-row ${styles.page_twobutton_layout}`}>
                   <button className={styles.page_light_button}>Order Now</button>
                   <button className={styles.page_dark_button}>Learn More</button>
                 </div> 
@@ -72,7 +72,7 @@ export default function PageCreator(){
             return (
             <section key={page.id} style={{backgroundImage:`url(${page.img})`}} className={styles.page}>
                 <h1 className={styles.subtitle}>{page.subtitle}</h1>
-                <div className={styles.page_twobutton_layout}>
+                <div className={`d-flex flex-column flex-md-row ${styles.page_twobutton_layout}`}>
                   <button className={styles.page_light_button}>Order Now</button>
                   <button className={styles.page_dark_button}>Learn More</button>
                 </div> 
