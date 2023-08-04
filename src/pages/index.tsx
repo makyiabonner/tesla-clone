@@ -23,8 +23,8 @@ export default function Home() {
         </video>
         <section className={styles.hero_section}>
           <div className='d-flex flex-column align-items-center'>
-            <h1>Experience Tesla</h1>
-            <p>Schedule a Demo Drive Today</p>
+            <h1 className={styles.h1}>Experience Tesla</h1>
+            <p className={styles.p}>Schedule a Demo Drive Today</p>
           </div>
           <button className={styles.page_light_button}>Demo Drive</button>
         </section>

@@ -1,6 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
 .credit_info{
     display: flex;
     justify-content: center;
@@ -12,19 +10,21 @@
                 linear-gradient(3deg, rgb(0,0,0) 0%, rgb(70, 90, 156) 60%);
 }
 .credit_info_h3,.credit_info_p,.credit_info_a{
+    font-family: 'GothamSSm';
     color:white;
-    font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
 .credit_info_h3{
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: 700;
     letter-spacing: .5px;
 }
 .credit_info_p{
-    font-size: 17px;
+    font-size: 14px;
 }
 .credit_info_a{
     height: fit-content;
-    font-size: 17px;
+    font-size: 14px;
     transition: .5s linear .5s;
 }
 .credit_info_a:hover{
@@ -44,12 +44,16 @@
 }
 .nav_list{
     display: flex;
+    margin: 0;
+    padding: 0;
     justify-content: space-evenly;
     list-style: none;
     width: 27%;
 }
 .nav_list_item{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'GothamSSm';
+    font-size: 13.5px;
+    font-weight: 600;
 }
 .nav_help{
     display: flex;

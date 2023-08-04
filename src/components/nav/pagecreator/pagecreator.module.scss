@@ -1,3 +1,4 @@
+@import '../../../styles/fonts.scss';
 
 .page{
     display: flex;
@@ -5,8 +6,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 120px;
-    width: 100%;
+    width: auto;
     height: 100vh;
+    scroll-behavior: smooth;
     background-size: cover;
     background-position: center;
 }
@@ -27,8 +29,20 @@
     background-color: rgba(0,0,0,.6);
     color: white;
 }
-.price,.subtitle{
+.price,
+.subtitle,
+.link,
+.page_light_button,
+.page_dark_button{
     text-align: center;
+    font-family: 'GothamSSm';
+}
+.subtitle{
+    font-weight: 600;
+    font-size: 35px;
+}
+.price,.link{
+    font-size: 14px;
 }
 .link{
     text-align: center;
