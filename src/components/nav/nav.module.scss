@@ -43,8 +43,8 @@
     width: 120px;
 }
 .nav{
+    color: #000000;
     display: flex;
-    width: auto;
     background-color: transparent;
     padding-block:.8rem;
     padding-inline:clamp(.5rem,7vw,2rem);
@@ -63,7 +63,6 @@
 .nav_list_item{
     font-family: 'GothamSSm';
     font-size: 13.5px;
-    font-weight: 600;
 }
 .nav_help{
     display: flex;

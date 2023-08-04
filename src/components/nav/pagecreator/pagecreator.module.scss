@@ -1,19 +1,36 @@
 @import '../../../styles/fonts.scss';
 
 .page{
+    scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     width: auto;
-    height: 100vh;
-    scroll-behavior: smooth;
     background-size: cover;
     background-position: center;
-    padding-top: clamp(10rem,7vh,13rem);
+    padding-top: 3rem;
     padding-bottom: clamp(3rem,7vh,5rem);
     padding-inline: min(1rem);
 
+}
+@media (max-width:768px) {
+    .page{
+        height: 83vh;
+    }
+}
+@media (min-width: 769px) and (max-width:1440px) {
+    .page{
+        height: 93vh;
+    }
+}
+@media (min-width:1441px) and (max-width:2560px) {
+    .page{
+        height: 96vh;
+    }
+}
+.scroll_snap_container{
+    scroll-snap-type: y mandatory;
 }
 .page_twobutton_layout{
     display: flex;
@@ -42,6 +59,7 @@
     font-family: 'GothamSSm';
 }
 .subtitle{
+    scroll-snap-align: start;
     font-weight: 600;
     font-size: 35px;
 }

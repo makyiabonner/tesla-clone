@@ -1,7 +1,7 @@
 .main {
-  display: flex;
-  flex-direction: column;
+  display: block;
   z-index: 0;
+  scroll-snap-type: y mandatory;
 }
 .video{
   position: absolute;

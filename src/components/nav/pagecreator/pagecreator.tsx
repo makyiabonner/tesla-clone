@@ -14,7 +14,7 @@ export default function PageCreator(){
       ];
     
     return (
-    <>
+    <div className={styles.scroll_snap_container}>
     {pages.map(page => {
         if(page.price){
           return (
@@ -86,5 +86,5 @@ export default function PageCreator(){
             </section>
             )}
         })}
-        </>
+        </div>
     )}
