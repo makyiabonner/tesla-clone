@@ -1,4 +1,5 @@
-import styles from './pagecreator.module.scss'
+import styles from './pagecreator.module.scss';
+import React, { useRef, useEffect } from 'react';
 
 
 export default function PageCreator(){
@@ -15,76 +16,87 @@ export default function PageCreator(){
     
     return (
     <div className={styles.scroll_snap_container}>
-    {pages.map(page => {
-        if(page.price){
-          return (
-            <section key={page.id} style={{backgroundImage:`url(${page.img})`}} className={styles.page}>
-                <div>
+
+        <video className={`w-100 ${styles.video}`} autoPlay loop muted>
+          <source src='https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto/Homepage-Demo-Drive-Desktop-NA.mp4' type="video/mp4" />
+        </video>
+        <section className={styles.hero_section}>
+          <div className='d-flex flex-column align-items-center'>
+            <h1 className={styles.h1}>Experience Tesla</h1>
+            <p className={styles.p}>Schedule a Demo Drive Today</p>
+          </div>
+          <button className={styles.hero_light_button}>Demo Drive</button>
+        </section>
+        {pages.map(page => {
+            if(page.price){
+            return (
+                <section key={page.id} style={{backgroundImage:`url(${page.img})`}} className={styles.page}>
+                    <div>
+                        <h1 className={styles.subtitle}>{page.subtitle}</h1>
+                        <p className={styles.price}>{`Starting at ${page.price}`}<br></br>After Federal Tax Credit</p>
+                    </div>
+                    <div className={`d-flex flex-column flex-md-row ${styles.page_twobutton_layout}`}>
+                        <button className={styles.page_light_button}>Explore Inventory</button>
+                        <button className={styles.page_dark_button}>Custom Order</button>
+                    </div> 
+                </section>
+            )}
+            if(page.link === 'Explore Inventory'){
+                return (
+                <section key={page.id} style={{backgroundImage:`url(${page.img})`}} className={styles.page}>
+                    <div>
+                        <h1 className={styles.subtitle}>{page.subtitle}</h1>
+                        <a className={styles.link}><p>{page.link}</p></a>
+                    </div>
+                    <div className={`d-flex flex-column flex-md-row ${styles.page_twobutton_layout}`}>
+                    <button className={styles.page_light_button}>Order Now</button>
+                    <button className={styles.page_dark_button}>Learn More</button>
+                    </div> 
+                </section>
+                )}
+            if(page.link === 'Schedule a Virtual Consultation'){
+                return (
+                <section key={page.id} style={{backgroundImage:`url(${page.img})`}} className={styles.page}>
+                    <div>
+                        <h1 className={styles.subtitle}>{page.subtitle}</h1>
+                        <a className={styles.link}><p>{page.link}</p></a>
+                    </div>
+                    <div className={`d-flex flex-column flex-md-row ${styles.page_twobutton_layout}`}>
+                    <button className={styles.page_light_button}>Order Now</button>
+                    <button className={styles.page_dark_button}>Learn More</button>
+                    </div>  
+                </section>
+                )}
+            if(page.text){
+                return (
+                <section key={page.id} style={{backgroundImage:`url(${page.img})`}} className={styles.page}>
+                    <div>
+                        <h1 className={styles.subtitle}>{page.subtitle}</h1>
+                        <p className={styles.text}>{page.text}</p>
+                    </div>
+                    <div className={`d-flex flex-column flex-md-row ${styles.page_twobutton_layout}`}>
+                    <button className={styles.page_light_button}>Order Now</button>
+                    <button className={styles.page_dark_button}>Learn More</button>
+                    </div> 
+                </section>
+                )}
+            if(page.subtitle === 'Powerwall'){
+                return (
+                <section key={page.id} style={{backgroundImage:`url(${page.img})`}} className={styles.page}>
                     <h1 className={styles.subtitle}>{page.subtitle}</h1>
-                    <p className={styles.price}>{`Starting at ${page.price}`}<br></br>After Federal Tax Credit</p>
-                </div>
-                <div className={`d-flex flex-column flex-md-row ${styles.page_twobutton_layout}`}>
-                    <button className={styles.page_light_button}>Explore Inventory</button>
-                    <button className={styles.page_dark_button}>Custom Order</button>
-                </div> 
-            </section>
-           )}
-        if(page.link === 'Explore Inventory'){
-            return (
-            <section key={page.id} style={{backgroundImage:`url(${page.img})`}} className={styles.page}>
-                <div>
+                    <div className={`d-flex flex-column flex-md-row ${styles.page_twobutton_layout}`}>
+                    <button className={styles.page_light_button}>Order Now</button>
+                    <button className={styles.page_dark_button}>Learn More</button>
+                    </div> 
+                </section>
+                )}
+            if(page.subtitle === 'Accessories'){
+                return (
+                <section key={page.id} style={{backgroundImage:`url(${page.img})`}} className={styles.page}>
                     <h1 className={styles.subtitle}>{page.subtitle}</h1>
-                    <a className={styles.link}><p>{page.link}</p></a>
-                </div>
-                <div className={`d-flex flex-column flex-md-row ${styles.page_twobutton_layout}`}>
-                  <button className={styles.page_light_button}>Order Now</button>
-                  <button className={styles.page_dark_button}>Learn More</button>
-                </div> 
-            </section>
-            )}
-        if(page.link === 'Schedule a Virtual Consultation'){
-            return (
-            <section key={page.id} style={{backgroundImage:`url(${page.img})`}} className={styles.page}>
-                <div>
-                    <h1 className={styles.subtitle}>{page.subtitle}</h1>
-                    <a className={styles.link}><p>{page.link}</p></a>
-                </div>
-                <div className={`d-flex flex-column flex-md-row ${styles.page_twobutton_layout}`}>
-                  <button className={styles.page_light_button}>Order Now</button>
-                  <button className={styles.page_dark_button}>Learn More</button>
-                </div>  
-            </section>
-            )}
-        if(page.text){
-            return (
-            <section key={page.id} style={{backgroundImage:`url(${page.img})`}} className={styles.page}>
-                <div>
-                    <h1 className={styles.subtitle}>{page.subtitle}</h1>
-                    <p className={styles.text}>{page.text}</p>
-                </div>
-                <div className={`d-flex flex-column flex-md-row ${styles.page_twobutton_layout}`}>
-                  <button className={styles.page_light_button}>Order Now</button>
-                  <button className={styles.page_dark_button}>Learn More</button>
-                </div> 
-            </section>
-            )}
-        if(page.subtitle === 'Powerwall'){
-            return (
-            <section key={page.id} style={{backgroundImage:`url(${page.img})`}} className={styles.page}>
-                <h1 className={styles.subtitle}>{page.subtitle}</h1>
-                <div className={`d-flex flex-column flex-md-row ${styles.page_twobutton_layout}`}>
-                  <button className={styles.page_light_button}>Order Now</button>
-                  <button className={styles.page_dark_button}>Learn More</button>
-                </div> 
-            </section>
-            )}
-        if(page.subtitle === 'Accessories'){
-            return (
-            <section key={page.id} style={{backgroundImage:`url(${page.img})`}} className={styles.page}>
-                <h1 className={styles.subtitle}>{page.subtitle}</h1>
-                <button className={styles.page_light_button}>Shop Now</button> 
-            </section>
-            )}
-        })}
+                    <button className={styles.page_light_button}>Shop Now</button> 
+                </section>
+                )}
+            })}
         </div>
     )}

@@ -20,6 +20,9 @@
     "react-bootstrap": "^2.8.0",
     "react-dom": "18.2.0",
     "react-player": "^2.12.0",
+    "react-scroll-snap": "^1.0.0",
+    "react-snap-scroll": "^0.0.5",
+    "react-use-scroll-snap": "^0.0.4",
     "sass": "^1.64.2",
     "typescript": "5.1.6"
   }

@@ -1,7 +1,6 @@
 @import '../../../styles/fonts.scss';
 
 .page{
-    scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,28 +8,80 @@
     width: auto;
     background-size: cover;
     background-position: center;
-    padding-top: 3rem;
+    padding-top: clamp(60px,3px,10rem);
     padding-bottom: clamp(3rem,7vh,5rem);
     padding-inline: min(1rem);
 
 }
+.scroll_snap_container .page,.page::before, .hero_section {
+    scroll-snap-align: start;
+    scroll-snap-align: end;
+  }
+.scroll_snap_container {
+    height: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+.video{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.hero_section{
+  display: flex;
+  z-index: -1;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  text-align: center;
+  width: auto;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  padding-top: clamp(10rem,10vh,13rem);
+  padding-bottom: 3rem;
+  padding-inline: min(3rem);
+}
+.h1,
+.p,
+.hero_light_button{
+  font-family: 'GothamSSm';
+  color: white;
+}
+.hero_light_button{
+  font-size: 14px;
+  padding-block: min(.4rem);
+  padding-inline: min(4rem);
+  border: 3px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+}
 @media (max-width:768px) {
     .page{
-        height: 83vh;
+        height: 84vh;
+    }
+    .scroll_snap_container .page, .hero_section {
+        scroll-margin-top:118px;
     }
 }
 @media (min-width: 769px) and (max-width:1440px) {
     .page{
         height: 93vh;
     }
+    .scroll_snap_container .page, .hero_section {
+        scroll-margin-top:54px;
+    }
 }
 @media (min-width:1441px) and (max-width:2560px) {
     .page{
         height: 96vh;
     }
-}
-.scroll_snap_container{
-    scroll-snap-type: y mandatory;
+    .scroll_snap_container .page, .hero_section {
+        scroll-margin-top:50px;
+    }
 }
 .page_twobutton_layout{
     display: flex;
