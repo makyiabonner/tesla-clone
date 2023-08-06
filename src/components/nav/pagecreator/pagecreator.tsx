@@ -1,8 +1,30 @@
 import styles from './pagecreator.module.scss';
-import React, { useRef, useEffect } from 'react';
-
+import Nav from '../nav';
+import React, { useEffect, useState, useRef } from 'react';
 
 export default function PageCreator(){
+    const [navColor, setNavColor] = useState('white');
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+  
+    function handleScroll() {
+      if (scrollContainerRef.current) {
+        const scrollContainer = scrollContainerRef.current;
+        const scrollPosition = scrollContainer.scrollTop;
+        const threshold = 100;
+        setNavColor(scrollPosition > threshold ? 'black' : 'white');
+      }
+    }
+  
+    useEffect(() => {
+      const scrollContainer = scrollContainerRef.current;
+      if (scrollContainer) {
+        scrollContainer.addEventListener('scroll', handleScroll);
+        return () => {
+          scrollContainer.removeEventListener('scroll', handleScroll);
+        };
+      }
+    }, []);
+
     const pages = [
         {id:1, subtitle: 'Model 3', price:'$32,740', img:'/photos/model-3.jpg'},
         {id:2, subtitle: 'Model Y', price:'$40,240', img:'/photos/model-y.jpg'},
@@ -15,8 +37,9 @@ export default function PageCreator(){
       ];
     
     return (
-    <div className={styles.scroll_snap_container}>
-
+    <>
+        <Nav color={navColor} />
+    <div className={styles.scroll_snap_container} ref={scrollContainerRef}>
         <video className={`w-100 ${styles.video}`} autoPlay loop muted>
           <source src='https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto/Homepage-Demo-Drive-Desktop-NA.mp4' type="video/mp4" />
         </video>
@@ -99,4 +122,5 @@ export default function PageCreator(){
                 )}
             })}
         </div>
+        </>
     )}

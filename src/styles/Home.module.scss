@@ -3,10 +3,3 @@
   z-index: 0;
   height: 100vh;
 }
-.scroll_snap_container {
-  height: 100%;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  scroll-padding-top: 1px; /* Adjust this value to fine-tune snapping position */
-}

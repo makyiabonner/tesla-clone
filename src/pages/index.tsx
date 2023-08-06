@@ -3,11 +3,13 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.scss'
 import Nav from '@/components/nav/nav'
-import PageCreator from '@/components/nav/pagecreator/pagecreator'
+import React, { useEffect, useState, useRef } from 'react';
+import PageCreator from '@/components/nav/pagecreator/pagecreator';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
+
   return (
     <>
       <Head>
@@ -17,8 +19,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Nav/>
-        <PageCreator/>
+        <PageCreator />
       </main>
     </>
   )
