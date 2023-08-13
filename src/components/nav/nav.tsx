@@ -1,3 +1,4 @@
+import Link from '../../../node_modules/next/link';
 import styles from './nav.module.scss';
 
 export default function Nav(props) {
@@ -6,7 +7,7 @@ export default function Nav(props) {
             <div className={`flex-column flex-lg-row text-center ${styles.credit_info}`}>
                 <h3 className={styles.credit_info_h3}>$7,500 Federal Tax Credit</h3>
                 <p className={styles.credit_info_p}>Available for new Model 3 and Model Y. Reductions to tax credit likely after Dec 31.</p>
-                <a href="/" className={styles.credit_info_a}>See Details</a>
+                <Link href="/" className={styles.credit_info_a}>See Details</Link>
             </div>
             <nav className={styles.nav} style={{color:props.color}}>
                 <svg className={styles.logo} viewBox="0 0 342 35" xmlns="http://www.w3.org/2000/svg">
